@@ -1,0 +1,20 @@
+[user]
+	name = Jan Klivan
+	email = janklivan@gmail.com
+[core]
+	editor = vim
+	autocrlf = input
+[alias]
+	out = !GIT_PAGER= git log --pretty=oneline --abbrev-commit --graph @{u}..
+	in = !git fetch && GIT_PAGER= git log --pretty=oneline --abbrev-commit --graph ..@{u}
+	count = "!sh -c 'git shortlog -s | awk \"{ SUM += \\$1 } END { print SUM }\"'"
+[merge]
+	summary = true
+	tool = vimdiff
+	conflictstyle = diff3
+[push]
+	default = simple
+[mergetool]
+	prompt = false
+[pull]
+	rebase = false
