@@ -11,7 +11,7 @@ cd dotfiles
 DST_DIR=$HOME
 DIR="$( dirname "$0" )"
 
-exec 5<"$DIR"/filelist.txt
+exec 5<"$DIR"/backup.txt
 while read -u5 file; do
 	original="$file"
 	# skip empty lines and comments
