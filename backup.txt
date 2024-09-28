@@ -1,0 +1,7 @@
+.zshrc
+.tmux.conf
+.gitconfig
+.vimrc
+.oh-my-zsh/plugins/zsh-autosuggestions/.git/config
+.oh-my-zsh/plugins/zsh-syntax-highlighting/.git/config
+.oh-my-zsh/custom/themes/powerlevel10k/.git/config
