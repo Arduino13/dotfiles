@@ -2,6 +2,12 @@
 
 #from https://github.com/jkrcma/dotfiles
 
+#installing oh-my-zsh and vim plugin manager
+cd ..
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+cd dotfiles
+
 DST_DIR=$HOME
 DIR="$( dirname "$0" )"
 
@@ -30,4 +36,7 @@ while read -u5 file; do
 		git rev-parse --git-dir 2>/dev/null || git init && git pull
 	fi
 done
+
+echo "You also need to isntall zsh, tmux, and run :PlugInstall inside VIM and maybe Prefix + I inside TMUX"
+
 exec 5<&-
